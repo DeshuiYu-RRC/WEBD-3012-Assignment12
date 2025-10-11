@@ -56,7 +56,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
                 value={value}
                 backgroundColor={backgroundColor}
                 disabled={disabled}
-                checked={checked}
+                {...(onChange ? { checked } : { defaultChecked: checked })}
                 onChange={onChange}
                 data-testid="radio-component"
             />

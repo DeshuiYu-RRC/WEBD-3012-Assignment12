@@ -1,46 +1,121 @@
-# Getting Started with Create React App
+# React Component Library with Storybook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive UI component library built with React, TypeScript, Styled Components, and Storybook.
 
-## Available Scripts
+**Repository:** [https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git](https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git)
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+This project is a complete UI component library featuring 9 reusable React components with full Storybook integration, comprehensive testing, and Docker deployment support.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Components Included
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The library contains the following components, each with default and disabled states:
 
-### `npm test`
+- **Button** - Interactive button with multiple sizes and variants
+- **Label** - Form label component with required field support
+- **Text** - Flexible text component with size and weight options
+- **Table** - Complete table system with:
+    - Table Header
+    - Table Row
+    - Table Cell
+    - Table Footer
+- **Dropdown** - Select dropdown with customizable options
+- **Radio Button** - Radio input for single selections
+- **Img** - Responsive image component with border radius support
+- **Hero Image** - Large banner image with overlay text
+- **Card** - Container card with title and content
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+#### 1. Clone the Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git
+cd WEBD-3012-Assignment12
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 2. Build the Docker Image
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+docker build --no-cache -t deshui_yu_coding_assignment12 .
+```
 
-### `npm run eject`
+#### 3. Run the Docker Container
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+docker run -p 8083:8083 --name deshui_yu_coding_assignment12 deshui_yu_coding_assignment12
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 4. Access Storybook
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Open your browser and navigate to:
+```
+http://localhost:8083
+```
+or
+```
+http://127.0.0.1:8083
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 5. Stop the Container
 
-## Learn More
+```bash
+# Find the container ID
+docker ps
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Stop it
+docker stop <container_id>
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+### Option 2: Local Development (Without Docker)
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git
+cd WEBD-3012-Assignment12
+```
+
+#### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+#### 3. Run Storybook
+
+```bash
+npm run storybook
+```
+
+#### 4. Access Storybook
+
+Open your browser to:
+```
+http://localhost:8083
+```
+
+---
+
+## Running Tests
+
+Run all component tests:
+
+```bash
+npm test
+```
+
+Run tests in watch mode:
+
+```bash
+npm test -- --watch
+```
+
+Run tests with coverage:
+
+```bash
+npm test -- --coverage
+```
