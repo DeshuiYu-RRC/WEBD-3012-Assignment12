@@ -1,7 +1,7 @@
 export interface ButtonProps {
-    text?: string;
-    backgroundColor?: string;
-    disabled?: boolean;
-    onClick?: () => void;
-    size?: 'small' | 'medium' | 'large';
+  text?: string;
+  backgroundColor?: string;
+  disabled?: boolean;
+  onClick?: () => void;
+  size?: 'small' | 'medium' | 'large';
 }
