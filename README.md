@@ -6,7 +6,7 @@ A comprehensive UI component library built with React, TypeScript, Styled Compon
 
 ## Project Overview
 
-This project is a complete UI component library featuring 9 reusable React components with full Storybook integration, comprehensive testing, and Docker deployment support.
+This project is a complete UI component library featuring 10 reusable React components with full Storybook integration, comprehensive testing, Docker deployment support, and automated code quality checks.
 
 ## Components Included
 
@@ -16,10 +16,10 @@ The library contains the following components, each with default and disabled st
 - **Label** - Form label component with required field support
 - **Text** - Flexible text component with size and weight options
 - **Table** - Complete table system with:
-    - Table Header
-    - Table Row
-    - Table Cell
-    - Table Footer
+  - Table Header
+  - Table Row
+  - Table Cell
+  - Table Footer
 - **Dropdown** - Select dropdown with customizable options
 - **Radio Button** - Radio input for single selections
 - **Img** - Responsive image component with border radius support
@@ -38,24 +38,24 @@ cd WEBD-3012-Assignment12
 #### 2. Build the Docker Image
 
 ```bash
-docker build --no-cache -t deshui_yu_coding_assignment12 .
+docker build --no-cache -t deshui_yu_coding_assignment13 .
 ```
 
 #### 3. Run the Docker Container
 
 ```bash
-docker run -p 8083:8083 --name deshui_yu_coding_assignment12 deshui_yu_coding_assignment12
+docker run -p 8018:8018 --name deshui_yu_coding_assignment13 deshui_yu_coding_assignment13
 ```
 
 #### 4. Access Storybook
 
 Open your browser and navigate to:
 ```
-http://localhost:8083
+http://localhost:8018
 ```
 or
 ```
-http://127.0.0.1:8083
+http://127.0.0.1:8018
 ```
 
 #### 5. Stop the Container
@@ -67,35 +67,32 @@ docker ps
 # Stop it
 docker stop <container_id>
 ```
-
 ---
 
-### Option 2: Local Development (Without Docker)
+## Code Quality Features
 
-#### 1. Clone the Repository
+### Pre-Commit Checks with Husky
 
-```bash
-git clone https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git
-cd WEBD-3012-Assignment12
-```
-
-#### 2. Install Dependencies
+Before every commit, the following checks run automatically:
+- **Prettier** - Formats code automatically
+- **Tests** - Runs all component tests
 
 ```bash
-npm install
+git add .
+git commit -m "your message"
+# Automatically formats code and runs tests
 ```
 
-#### 3. Run Storybook
+If any check fails, the commit will be blocked.
+
+### Manual Commands
 
 ```bash
-npm run storybook
-```
+# Format code
+npm run format
 
-#### 4. Access Storybook
-
-Open your browser to:
-```
-http://localhost:8083
+# Run tests
+npm test
 ```
 
 ---
@@ -119,3 +116,17 @@ Run tests with coverage:
 ```bash
 npm test -- --coverage
 ```
+
+---
+
+## Docker Details
+
+- **Container Name:** `deshui_yu_coding_assignment13`
+- **Working Directory:** `/deshui_yu_ui_garden_build_checks`
+- **Port:** `8018`
+- **Web Server:** Nginx Alpine
+- **Build:** Multi-stage build with Node.js 20
+
+---
+
+**Built by Deshui Yu for WEBD-3012**
