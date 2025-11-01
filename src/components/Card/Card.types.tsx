@@ -1,7 +1,7 @@
 export interface CardProps {
-  title?: string;
-  content?: string;
-  backgroundColor?: string;
-  disabled?: boolean;
-  elevation?: number;
+    title?: string;
+    content?: string;
+    backgroundColor?: string;
+    disabled?: boolean;
+    elevation?: number;
 }

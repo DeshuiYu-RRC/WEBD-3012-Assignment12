@@ -2,11 +2,13 @@
 
 A comprehensive UI component library built with React, TypeScript, Styled Components, and Storybook.
 
-**Repository:** [https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git](https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git)
+**Repository:
+** [https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git](https://github.com/DeshuiYu-RRC/WEBD-3012-Assignment12.git)
 
 ## Project Overview
 
-This project is a complete UI component library featuring 10 reusable React components with full Storybook integration, comprehensive testing, Docker deployment support, and automated code quality checks.
+This project is a complete UI component library featuring 10 reusable React components with full Storybook integration,
+comprehensive testing, Docker deployment support, and automated code quality checks.
 
 ## Components Included
 
@@ -16,10 +18,10 @@ The library contains the following components, each with default and disabled st
 - **Label** - Form label component with required field support
 - **Text** - Flexible text component with size and weight options
 - **Table** - Complete table system with:
-  - Table Header
-  - Table Row
-  - Table Cell
-  - Table Footer
+    - Table Header
+    - Table Row
+    - Table Cell
+    - Table Footer
 - **Dropdown** - Select dropdown with customizable options
 - **Radio Button** - Radio input for single selections
 - **Img** - Responsive image component with border radius support
@@ -50,10 +52,13 @@ docker run -p 8018:8018 --name deshui_yu_coding_assignment13 deshui_yu_coding_as
 #### 4. Access Storybook
 
 Open your browser and navigate to:
+
 ```
 http://localhost:8018
 ```
+
 or
+
 ```
 http://127.0.0.1:8018
 ```
@@ -67,6 +72,7 @@ docker ps
 # Stop it
 docker stop <container_id>
 ```
+
 ---
 
 ## Code Quality Features
@@ -74,6 +80,7 @@ docker stop <container_id>
 ### Pre-Commit Checks with Husky
 
 Before every commit, the following checks run automatically:
+
 - **Prettier** - Formats code automatically
 - **Tests** - Runs all component tests
 
