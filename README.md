@@ -98,6 +98,9 @@ If any check fails, the commit will be blocked.
 # Format code
 npm run format
 
+# Lint check
+npm run lint
+
 # Run tests
 npm test
 ```
