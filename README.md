@@ -82,6 +82,7 @@ docker stop <container_id>
 Before every commit, the following checks run automatically:
 
 - **Prettier** - Formats code automatically
+- **EsLint** - Check messy code automatically
 - **Tests** - Runs all component tests
 
 ```bash
