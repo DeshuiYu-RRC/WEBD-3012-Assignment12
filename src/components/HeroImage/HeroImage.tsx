@@ -7,13 +7,13 @@ const HeroContainer = styled.div<HeroImageProps>`
   width: 100%;
   height: ${({ height }) => height || '400px'};
   overflow: hidden;
-  opacity: ${({ disabled }) => disabled ? 0.5 : 1};
-  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'default'};
-  filter: ${({ disabled }) => disabled ? 'grayscale(100%)' : 'none'};
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'default')};
+  filter: ${({ disabled }) => (disabled ? 'grayscale(100%)' : 'none')};
   background-color: ${({ backgroundColor }) => backgroundColor || '#000'};
 
   @media (max-width: 768px) {
-    height: ${({ height }) => height ? `calc(${height} * 0.6)` : '240px'};
+    height: ${({ height }) => (height ? `calc(${height} * 0.6)` : '240px')};
   }
 `;
 
@@ -60,26 +60,26 @@ const HeroSubtitle = styled.p`
 `;
 
 export const HeroImage: React.FC<HeroImageProps> = ({
-                                                        src = 'https://via.placeholder.com/1200x400',
-                                                        alt = 'Hero image',
-                                                        title = 'Welcome',
-                                                        subtitle = 'This is a hero section',
-                                                        backgroundColor,
-                                                        disabled = false,
-                                                        height,
-                                                    }) => {
-    return (
-        <HeroContainer
-            backgroundColor={backgroundColor}
-            disabled={disabled}
-            height={height}
-            data-testid="hero-component"
-        >
-            <HeroImg src={src} alt={alt} />
-            <HeroOverlay disabled={disabled}>
-                <HeroTitle>{title}</HeroTitle>
-                <HeroSubtitle>{subtitle}</HeroSubtitle>
-            </HeroOverlay>
-        </HeroContainer>
-    );
+  src = 'https://via.placeholder.com/1200x400',
+  alt = 'Hero image',
+  title = 'Welcome',
+  subtitle = 'This is a hero section',
+  backgroundColor,
+  disabled = false,
+  height,
+}) => {
+  return (
+    <HeroContainer
+      backgroundColor={backgroundColor}
+      disabled={disabled}
+      height={height}
+      data-testid="hero-component"
+    >
+      <HeroImg src={src} alt={alt} />
+      <HeroOverlay disabled={disabled}>
+        <HeroTitle>{title}</HeroTitle>
+        <HeroSubtitle>{subtitle}</HeroSubtitle>
+      </HeroOverlay>
+    </HeroContainer>
+  );
 };
